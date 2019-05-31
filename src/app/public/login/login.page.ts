@@ -7,30 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  public text: string = 'Mudar Idioma';
-  public title: string = 'Login';
-  public email: string = "your@email.com";
-  public password: string = "Password";
+  public text = 'Mudar Idioma';
+  public title = 'Login';
+  public email = 'your@email.com';
+  public password = 'Password';
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
-  login(){
+  login() {
     this.authService.login();
   }
 
-  changeText(): void{
-    if(this.text === 'Mudar Idioma'){
+  changeText(): void {
+    if (this.text === 'Mudar Idioma') {
       this.text = 'Change Language';
       this.title = 'Entrar';
-      this.email = "seu@email.com";
-      this.password = "Senha";
+      this.email = 'seu@email.com';
+      this.password = 'Senha';
     } else {
       this.text = 'Mudar Idioma';
       this.title = 'Login';
-      this.email = "your@email.com";
-      this.password = "Password";
+      this.email = 'your@email.com';
+      this.password = 'Password';
     }
   }
 

@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  public text: string = 'Mudar Idioma';
-  public title: string = 'Pollution Map';
-  public display: string = 'Welcome the project more to be added in the future.';
+  public text = 'Mudar Idioma';
+  public title = 'Pollution Map';
+  public display = 'Welcome the project more to be added in the future.';
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
@@ -19,8 +19,8 @@ export class DashboardPage implements OnInit {
     this.authService.logout();
   }
 
-  changeText(): void{
-    if(this.text === 'Mudar Idioma'){
+  changeText(): void {
+    if (this.text === 'Mudar Idioma') {
       this.text = 'Change Language';
       this.title = 'Mapa de Poluição';
       this.display = 'Bem-vindo o projeto mais a ser adicionado no futuro.';
