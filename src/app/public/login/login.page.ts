@@ -1,5 +1,9 @@
+import { LanguagePopoverPage } from '../../pages/language-popover/language-popover.page';
 import { AuthenticationService } from './../../services/authentication.service';
 import { Component, OnInit } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-login',
@@ -7,11 +11,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  public text = 'Mudar Idioma';
-  public title = 'Login';
-  public email = 'your@email.com';
-  public password = 'Password';
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService, private translate: TranslateService, private popoverCtrl: PopoverController) { }
+
+  async openLanguagePopover(ev) {
+    const popover = await this.popoverCtrl.create({
+      component: LanguagePopoverPage,
+      event: ev
+    });
+    await popover.present();
+  }
 
   ngOnInit() {
   }
@@ -19,19 +27,4 @@ export class LoginPage implements OnInit {
   login() {
     this.authService.login();
   }
-
-  changeText(): void {
-    if (this.text === 'Mudar Idioma') {
-      this.text = 'Change Language';
-      this.title = 'Entrar';
-      this.email = 'seu@email.com';
-      this.password = 'Senha';
-    } else {
-      this.text = 'Mudar Idioma';
-      this.title = 'Login';
-      this.email = 'your@email.com';
-      this.password = 'Password';
-    }
-  }
-
 }

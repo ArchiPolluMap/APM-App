@@ -1,0 +1,20 @@
+{
+    "LOGIN" : {
+        "text" : "Mudar Idioma",
+        "title" : "Entrar",
+        "email" : "seu@email.com",
+        "password" : "Senha"
+    },
+
+    "DASHBOARD" : {
+        "text" : "Mudar Idioma",
+        "title" : "Mapa de Polição",
+        "display" : "Bem-vindo ao projeto mais a ser adicionado no futuro."
+
+    },
+
+    "LANGUAGE" : {
+        "english" : "Inglês",
+        "portugese" : "Português"
+    }
+}

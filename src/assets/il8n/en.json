@@ -1,0 +1,21 @@
+{
+    "LOGIN" : {
+        "text" : "Change Language",
+        "title" : "Login",
+        "email" : "your@email.com",
+        "password" : "Password"
+    },
+
+    "DASHBOARD" : {
+        "text" : "Change Language",
+        "title" : "Pollution Map",
+        "display" : "Welcome to the project more to be added in the future."
+
+    },
+
+    "LANGUAGE" : {
+        "english" : "English",
+        "portugese" : "Portugese"
+    }
+
+}

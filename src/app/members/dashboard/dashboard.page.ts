@@ -1,5 +1,8 @@
+import { PopoverController } from '@ionic/angular';
+import { LanguagePopoverPage } from '../../pages/language-popover/language-popover.page';
 import { AuthenticationService } from './../../services/authentication.service';
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,27 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  public text = 'Mudar Idioma';
-  public title = 'Pollution Map';
-  public display = 'Welcome the project more to be added in the future.';
-  constructor(private authService: AuthenticationService) { }
+
+  constructor(private authService: AuthenticationService, private translate: TranslateService, private popoverCtrl: PopoverController) { }
+
+  async openLanguagePopover(ev) {
+    const popover = await this.popoverCtrl.create({
+      component: LanguagePopoverPage,
+      event: ev
+    });
+    await popover.present();
+  }
 
   ngOnInit() {
   }
 
   logout( ) {
     this.authService.logout();
-  }
-
-  changeText(): void {
-    if (this.text === 'Mudar Idioma') {
-      this.text = 'Change Language';
-      this.title = 'Mapa de Poluição';
-      this.display = 'Bem-vindo o projeto mais a ser adicionado no futuro.';
-    } else {
-      this.text = 'Mudar Idioma';
-      this.title = 'Pollution Map';
-      this.display = 'Welcome the project more to be added in the future.';
-    }
   }
 }

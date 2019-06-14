@@ -11,6 +11,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: './members/member-routing.module#MemberRoutingModule'
   },
+  { path: 'language-popover', loadChildren: './pages/language-popover/language-popover.module#LanguagePopoverPageModule' },
 ];
 
 @NgModule({
