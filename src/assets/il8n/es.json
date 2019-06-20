@@ -1,0 +1,28 @@
+{
+    "LOGIN" : {
+        "text" : "Cambiar Idioma",
+        "title" : "Iniciar Sesión",
+        "email" : "su@email.com",
+        "password" : "Contraseña"
+    },
+
+    "DASHBOARD" : {
+        "text" : "Cambiar Idioma",
+        "title" : "Mapa de la Contaminación",
+        "display" : "Bienvenido al proyecto más para ser agregado en el futuro.",
+        "button" : "Registrar Usuario"
+
+    },
+
+    "REGISTER" : {
+        "text" : "Cambiar Idioma",
+        "title": "Registro",
+        "display": "Ingrese información para nueva cuenta",
+        "button": "Regresar a Dashboard",
+        "name": "nombre",
+        "email" : "su@email.com",
+        "password" : "contraseña",
+        "repeat": "confirmar contraseña"
+    }
+
+}

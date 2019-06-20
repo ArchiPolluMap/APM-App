@@ -1,11 +1,15 @@
 import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MasterGuard } from './guards/master.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', loadChildren: './public/login/login.module#LoginPageModule' },
-  { path: 'register', loadChildren: './public/register/register.module#RegisterPageModule' },
+  { path: 'master',
+    canActivate: [MasterGuard],
+    loadChildren: './master/register/register.module#RegisterPageModule'
+  },
   {
     path: 'members',
     canActivate: [AuthGuard],

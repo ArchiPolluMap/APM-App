@@ -31,9 +31,9 @@ export class AppComponent {
       this.languageService.setInitialAppLanguage();
 
       this.authenticationService.authenticationState.subscribe(state => {
-        if(state){
+        if (state) {
           this.router.navigate(['members', 'dashboard']);
-        } else{
+        } else {
           this.router.navigate(['login']);
         }
       });

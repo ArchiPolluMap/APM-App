@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
       <ion-buttons slot="end">
-        <ion-button (click)="openLanguagePopover($event)"></ion-button>
+        <ion-button (click)="openLanguagePopover($event)">{{'LOGIN.text' | translate}}</ion-button>
           <ion-icon name = "more" slot = "icon-only">
           </ion-icon>
       </ion-buttons>
@@ -18,10 +18,10 @@
           </div>
           <div padding>
             <ion-item>
-              <ion-input name="email" type="email" placeholder= "your@email.com" ngModel required></ion-input>
+              <ion-input name="email" type="email" placeholder= "{{'LOGIN.email' | translate}}" ngModel required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="password" type="password" placeholder= "password" ngModel required></ion-input>
+              <ion-input name="password" type="password" placeholder= "{{'LOGIN.password' | translate}}" ngModel required></ion-input>
             </ion-item>
           </div>
           <div padding>

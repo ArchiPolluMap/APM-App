@@ -3,18 +3,25 @@
         "text" : "Mudar Idioma",
         "title" : "Entrar",
         "email" : "seu@email.com",
-        "password" : "Senha"
+        "password" : "senha"
     },
 
     "DASHBOARD" : {
         "text" : "Mudar Idioma",
         "title" : "Mapa de Polição",
-        "display" : "Bem-vindo ao projeto mais a ser adicionado no futuro."
+        "display" : "Bem-vindo ao projeto mais a ser adicionado no futuro.",
+        "button" : "Registrar Usuário"
 
     },
 
-    "LANGUAGE" : {
-        "english" : "Inglês",
-        "portugese" : "Português"
+    "REGISTER" : {
+        "text" : "Mudar Idioma",
+        "title": "Registo",
+        "display": "Insira informações para nova conta",
+        "button": "Regressar ao Dashboard",
+        "name": "nome",
+        "email" : "seu@email.com",
+        "password" : "senha",
+        "repeat": "confirme a senha"
     }
 }

@@ -4,15 +4,12 @@ import { AuthenticationService } from './../../services/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-
-
-
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.page.html',
-  styleUrls: ['./dashboard.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class DashboardPage implements OnInit {
+export class RegisterPage implements OnInit {
 
   constructor(private authService: AuthenticationService, private translate: TranslateService, private popoverCtrl: PopoverController,
               public navCtrl: NavController) { }
@@ -32,9 +29,8 @@ export class DashboardPage implements OnInit {
     this.authService.logout();
   }
 
-  public gotoRegister() {
-    if (this.authService.isMaster()) {
-      this.navCtrl.navigateForward('/master');
-    }
+  public gotoDashboard() {
+      this.navCtrl.navigateForward('/members/dashboard');
   }
+
 }

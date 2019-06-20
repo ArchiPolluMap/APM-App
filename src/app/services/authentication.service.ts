@@ -11,6 +11,7 @@ const TOKEN_KEY = 'auth-token';
 export class AuthenticationService {
 
   authenticationState = new BehaviorSubject(false);
+  masterState = new BehaviorSubject(false);
 
   constructor(private storage: Storage, private plt: Platform) {
     this.plt.ready().then(() => {
@@ -22,6 +23,9 @@ export class AuthenticationService {
      this.storage.get(TOKEN_KEY).then(res => {
       if (res) {
         this.authenticationState.next(true);
+        if (res) {
+          this.masterState.next(true);
+        }
       }
      });
    }
@@ -29,16 +33,22 @@ export class AuthenticationService {
    login() {
      return this.storage.set(TOKEN_KEY, 'Bearer 1234567').then(() => {
        this.authenticationState.next(true);
+       this.masterState.next(true);
      });
    }
 
    logout() {
      return this.storage.remove(TOKEN_KEY).then(() => {
       this.authenticationState.next(false);
+      this.masterState.next(false);
      });
    }
 
    isAuthenticated() {
      return this.authenticationState.value;
+   }
+
+   isMaster() {
+    return this.masterState.value;
    }
 }

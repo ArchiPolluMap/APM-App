@@ -1,0 +1,27 @@
+{
+    "LOGIN" : {
+        "text" : "Changer de Langue",
+        "title" : "S'identifier",
+        "email" : "votre@email.com",
+        "password" : "mot de passe"
+    },
+
+    "DASHBOARD" : {
+        "text" : "Changer de Langue",
+        "title" : "Carte de Pollution",
+        "display" : "Bienvenue sur le projet plus pour être ajouté à l'avenir.",
+        "button" : "Enregistrer un Utilisateur"
+    },
+
+    "REGISTER" : {
+        "text" : "Changer de Langue",
+        "title": "Registre",
+        "display": "Entrez les informations pour le nouveau compte  ",
+        "button": "Retour au Tableau de Bord",
+        "name": "prénom",
+        "email" : "votre@email.com",
+        "password" : "mot de passe",
+        "repeat": "confirmez le mot de passe"
+    }
+
+}
