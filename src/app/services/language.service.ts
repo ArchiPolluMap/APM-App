@@ -54,7 +54,6 @@ export class LanguageService {
         {text: 'Français  ', value: 'fr'},
       ];
     }
-    
   }
 
   setLanguage(lng) {
