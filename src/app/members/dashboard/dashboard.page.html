@@ -1,4 +1,25 @@
+<!DOCTYPE html>
 <ion-header>
+    <meta charset="utf-8" />
+
+    <script type='text/javascript'>
+    var map;
+    function loadMap() {
+        if (!map) {
+            var mapScriptUrl = 'https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AqWB7VvVhAytoXhjjSnCX0A1QnJlO3EIeFo5YjXzQmlrws_lEXez7csVtwAEWL33';
+            var script = document.createElement("script");
+            script.setAttribute('defer', '');
+            script.setAttribute('async', '');
+            script.setAttribute("type", "text/javascript");
+            script.setAttribute("src", mapScriptUrl);
+            document.body.appendChild(script);
+        }
+    }
+    function GetMap()
+    {
+        map = new Microsoft.Maps.Map('#myMap', {});
+    }
+    </script>
   <ion-toolbar>
     <ion-buttons slot="end">
      <ion-button (click)="gotoRegister();">{{'DASHBOARD.button' | translate}}</ion-button>
@@ -21,4 +42,7 @@
   <div class="ion-padding">
     {{ 'DASHBOARD.display' | translate}}
   </div>
+  <input type="button" onclick="loadMap()" value="Load Map"/>
+  <div id="myMap" style="position:relative;width:800px;height:600px;"></div>
+
 </ion-content>

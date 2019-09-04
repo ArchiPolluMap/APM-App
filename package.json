@@ -29,6 +29,8 @@
     "@ionic/storage": "^2.2.0",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@types/bingmaps": "0.0.1",
+    "bingmaps": "^2.0.3",
     "cordova-plugin-globalization": "1.11.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
