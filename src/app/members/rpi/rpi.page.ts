@@ -1,18 +1,15 @@
 import { PopoverController, NavController } from '@ionic/angular';
-import { LanguagePopoverPage } from '../../pages/language-popover/language-popover.page';
+import { LanguagePopoverPage } from './../../pages/language-popover/language-popover.page';
 import { AuthenticationService } from './../../services/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-
-
-
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.page.html',
-  styleUrls: ['./dashboard.page.scss'],
+  selector: 'app-rpi',
+  templateUrl: './rpi.page.html',
+  styleUrls: ['./rpi.page.scss'],
 })
-export class DashboardPage implements OnInit {
+export class RPiPage implements OnInit {
 
   constructor(private authService: AuthenticationService, private translate: TranslateService, private popoverCtrl: PopoverController,
               public navCtrl: NavController) { }
@@ -32,13 +29,8 @@ export class DashboardPage implements OnInit {
     this.authService.logout();
   }
 
-  public gotoRPi(){
-    this.navCtrl.navigateForward('/members/rpi');
-  }
+  gotoDashboard() {
+    this.navCtrl.navigateForward('/members/dashboard');
+}
 
-  public gotoRegister() {
-    if (this.authService.isMaster()) {
-      this.navCtrl.navigateForward('/master');
-    }
-  }
 }

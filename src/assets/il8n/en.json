@@ -10,19 +10,33 @@
         "text" : "Change Language",
         "title" : "Pollution Map",
         "display" : "Welcome to the project more to be added in the future.",
-        "button" : "Register User"
+        "button1" : "User Input",
+        "button2" : "RPi"
 
     },
 
-    "REGISTER" : {
+    "RPI":{
+        "text" :"Change Language",
+        "title": "Singular RPi",
+        "display": "Focused data from a specific Raspberry Pi displayed below.",
+        "button":"Return to Dashboard",
+        "location":"location",
+        "temp" :"temperature",
+        "hum" : "humidity",
+        "part" :"particulate level (ppm)"
+    },
+
+    "USERINPUT" : {
         "text" : "Change Language",
-        "title": "Register",
-        "display": "Enter information for new account",
+        "title": "User Input",
+        "display": "Enter your GPS location, the temperature, humidity, particulate level, and how you are feeling.",
         "button": "Return to Dashboard",
-        "name": "name",
-        "email" : "your@email.com",
-        "password" : "password",
-        "repeat": "confirm password"
+        "location": "location",
+        "temp" : "temperature",
+        "hum" : "humidity",
+        "part": "particulate level (ppm)",
+        "qual": "how are you feeling?",
+        "submit": "Submit"
     }
 
 }

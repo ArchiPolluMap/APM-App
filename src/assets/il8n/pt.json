@@ -10,18 +10,32 @@
         "text" : "Mudar Idioma",
         "title" : "Mapa de Polição",
         "display" : "Bem-vindo ao projeto mais a ser adicionado no futuro.",
-        "button" : "Registrar Usuário"
+        "button1" : "Entrada do Usuário",
+        "button2" : "RPi"
 
     },
 
-    "REGISTER" : {
+    "RPI":{
+        "text" :"Mudar Idioma",
+        "title": "RPi Singular",
+        "display": "Dados focados de um Raspberry Pi específico exibido abaixo.",
+        "button":"Regressar ao Dashboard",
+        "location":"localização",
+        "temp" :"temperatura",
+        "hum" : "umidade",
+        "part" :"nível de partículas (ppm)"
+    },
+
+    "USERINPUT" : {
         "text" : "Mudar Idioma",
-        "title": "Registo",
+        "title": "Entrada do Usuário",
         "display": "Insira informações para nova conta",
         "button": "Regressar ao Dashboard",
-        "name": "nome",
-        "email" : "seu@email.com",
-        "password" : "senha",
-        "repeat": "confirme a senha"
+        "location": "localização",
+        "temp" : "temperatura",
+        "hum" : "umidade",
+        "part": "nível de partículas (ppm)",
+        "qual": "como você está se sentindo?",
+        "submit": "Enviar"
     }
 }
